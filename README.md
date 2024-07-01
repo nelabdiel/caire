@@ -1,6 +1,3 @@
-# Let's create a README.md file with the provided content.
-
-readme_content = """
 # CAIRE (Categorized AI Review Engine)
 
 CAIRE is a web-based application designed to help you organize, cluster, and review AI use cases efficiently. By categorizing AI projects based on their descriptions and titles, CAIRE provides a comprehensive and user-friendly interface to explore and analyze similar projects.
