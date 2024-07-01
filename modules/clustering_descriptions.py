@@ -12,6 +12,5 @@ def cluster_descriptions(descriptions):
     
     # Check the number of clusters found (excluding noise points)
     n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
-    print(f'Estimated number of clusters: {n_clusters}')
     
     return clusters
