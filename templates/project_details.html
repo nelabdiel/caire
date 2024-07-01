@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAIRE - Project Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>Project Details</h1>
+    <h2>{{ project[title_column] }}</h2>
+    <p>{{ project[description_column] }}</p>
+    
+    <h3>Similar Projects (Cluster)</h3>
+    <ul>
+        {% for similar_project in similar_cluster %}
+        <li>{{ similar_project }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Similar Projects (Levenshtein)</h3>
+    <ul>
+        {% for similar_project in similar_levenshtein %}
+        <li>{{ similar_project }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

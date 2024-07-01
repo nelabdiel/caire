@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAIRE - Project List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Project List</h1>
+        <ul>
+            {% for project_title, cluster_label, cluster_size, index in projects %}
+            <li class="project" style="font-size: {{ 16 + cluster_size * 2 }}px;">
+                <a href="{{ url_for('project_details', project_id=index) }}">{{ project_title }}</a>
+                {% if cluster_label != -1 %}
+                <span class="cluster-info">(Cluster: {{ cluster_label }}, Size: {{ cluster_size }})</span>
+                {% else %}
+                <span class="no-cluster-info">(No Cluster)</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
