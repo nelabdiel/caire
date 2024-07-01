@@ -1,0 +1,70 @@
+/* Import a nicer font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use the nicer font */
+    position: relative;
+    margin: 0;
+    min-height: 100vh; /* Use min-height instead of height to allow scrolling */
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Use fixed position to ensure the background stays static */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/static/background.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8; /* Adjust the opacity to make the image transparent */
+    z-index: -1; /* Ensure the image stays behind all content */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8); /* More transparency */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto; /* Add margin for better spacing */
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* Ensure the container stays above the background */
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFF0;
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+li.project {
+    margin-bottom: 15px; /* Add space between projects */
+}
+
+a {
+    color: #FFFFFF; /* Gold color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.cluster-info {
+    color: #FFD700;  /* Gold color for cluster info */
+    font-size: 0.9em; /* Slightly smaller font for additional info */
+}
+
+.no-cluster-info {
+    color: #FF6347;  /* Tomato color for no cluster info */
+    font-size: 0.9em; /* Slightly smaller font for additional info */
+}
