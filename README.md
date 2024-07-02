@@ -42,3 +42,4 @@ Pending:
 - Adding environments
 - Possibly containarizing it
 - Adding other ways to cluster and find similarities
+- Extending to excel files
