@@ -35,8 +35,8 @@ def select_columns():
         if title_column and description_column:
             session['title_column'] = title_column
             session['description_column'] = description_column
-            titles = projects[title_column]
-            descriptions = projects[description_column]
+            titles = [str(title) for title in projects[title_column]]
+            descriptions = [str(desc) for desc in projects[description_column]]
             levenshtein_results = calculate_levenshtein_distances(titles)
             clustering_results = cluster_descriptions(descriptions)
             return redirect(url_for('project_list'))
